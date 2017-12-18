@@ -153,7 +153,7 @@ public class RecyclerViewActivity extends AppCompatActivity {
 
 
     private void resolveData() {
-        for (int i = 0; i < 19; i++) {
+        for (int i = 0; i < 4; i++) {
             VideoModel videoModel = new VideoModel();
             dataList.add(videoModel);
         }

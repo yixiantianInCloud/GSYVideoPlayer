@@ -53,7 +53,18 @@ public class JumpUtils {
     }
 
     /**
-     * 跳转到视频播放
+     * 跳到可控制
+     *
+     * @param activity
+     */
+    public static void gotoControl(Activity activity) {
+        Intent intent = new Intent(activity, DetailControlActivity.class);
+        activity.startActivity(intent);
+    }
+
+
+    /**
+     * 跳转到"无缝切换"视频播放
      *
      * @param activity
      * @param view
@@ -70,6 +81,17 @@ public class JumpUtils {
             activity.startActivity(intent);
             activity.overridePendingTransition(R.anim.abc_fade_in, R.anim.abc_fade_out);
         }
+    }
+
+
+    /**
+     * 跳到滤镜
+     *
+     * @param activity
+     */
+    public static void gotoFilter(Activity activity) {
+        Intent intent = new Intent(activity, DetailFilterActivity.class);
+        activity.startActivity(intent);
     }
 
     /**
@@ -104,18 +126,7 @@ public class JumpUtils {
     }
 
     /**
-     * 跳转到视频列表
-     *
-     * @param activity
-     */
-    public static void goToAutoVideoPlayer(Activity activity) {
-        Intent intent = new Intent(activity, AutoPlayRecyclerViewActivity.class);
-        ActivityOptionsCompat activityOptions = ActivityOptionsCompat.makeSceneTransitionAnimation(activity);
-        ActivityCompat.startActivity(activity, intent, activityOptions.toBundle());
-    }
-
-    /**
-     * 跳转到视频列表2
+     * 跳转到视频列表2 ,  （5个）， 会调用ListVideoAdapter.java中的url
      *
      * @param activity
      */
@@ -125,8 +136,9 @@ public class JumpUtils {
         ActivityCompat.startActivity(activity, intent, activityOptions.toBundle());
     }
 
+
     /**
-     * 跳转到视频列表
+     * 跳转到循环列表    4个
      *
      * @param activity
      */
@@ -137,7 +149,19 @@ public class JumpUtils {
     }
 
     /**
-     * 跳转到视频列表2
+     * 跳转到循环列表   6个
+     *
+     * @param activity
+     */
+    public static void goToAutoVideoPlayer(Activity activity) {
+        Intent intent = new Intent(activity, AutoPlayRecyclerViewActivity.class);
+        ActivityOptionsCompat activityOptions = ActivityOptionsCompat.makeSceneTransitionAnimation(activity);
+        ActivityCompat.startActivity(activity, intent, activityOptions.toBundle());
+    }
+
+
+    /**
+     * 跳转到循环列表 2， 弃
      *
      * @param activity
      */
@@ -158,7 +182,7 @@ public class JumpUtils {
     }
 
     /**
-     * 跳转到详情播放
+     * 跳转到 详情列表 播放
      *
      * @param activity
      */
@@ -169,7 +193,7 @@ public class JumpUtils {
 
 
     /**
-     * 跳转到详情播放
+     * 跳转到  web详情  播放
      *
      * @param activity
      */
@@ -215,26 +239,6 @@ public class JumpUtils {
      */
     public static void gotoInput(Activity activity) {
         Intent intent = new Intent(activity, InputUrlDetailActivity.class);
-        activity.startActivity(intent);
-    }
-
-    /**
-     * 跳到可控制
-     *
-     * @param activity
-     */
-    public static void gotoControl(Activity activity) {
-        Intent intent = new Intent(activity, DetailControlActivity.class);
-        activity.startActivity(intent);
-    }
-
-    /**
-     * 跳到滤镜
-     *
-     * @param activity
-     */
-    public static void gotoFilter(Activity activity) {
-        Intent intent = new Intent(activity, DetailFilterActivity.class);
         activity.startActivity(intent);
     }
 

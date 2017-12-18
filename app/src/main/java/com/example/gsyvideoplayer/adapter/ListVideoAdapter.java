@@ -44,7 +44,7 @@ public class ListVideoAdapter extends BaseAdapter {
         this.listVideoUtil = listVideoUtil;
 
         inflater = LayoutInflater.from(context);
-        for (int i = 0; i < 40; i++) {
+        for (int i = 0; i < 5; i++) {
             list.add(new VideoModel());
         }
 
@@ -81,7 +81,11 @@ public class ListVideoAdapter extends BaseAdapter {
 
         //增加封面
         holder.imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-        holder.imageView.setImageResource(R.mipmap.xxx1);
+        if (position % 2 == 0) {
+            holder.imageView.setImageResource(R.mipmap.xxx1);
+        } else {
+            holder.imageView.setImageResource(R.mipmap.xxx2);
+        }
         listVideoUtil.addVideoPlayer(position, holder.imageView, TAG, holder.videoContainer, holder.playerBtn);
         holder.playerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -89,7 +93,8 @@ public class ListVideoAdapter extends BaseAdapter {
                 notifyDataSetChanged();
                 //listVideoUtil.setLoop(true);
                 listVideoUtil.setPlayPositionAndTag(position, TAG);
-                final String url = "http://baobab.wdjcdn.com/14564977406580.mp4";
+                //final String url = "http://baobab.wdjcdn.com/14564977406580.mp4";
+                final String url = "http://cdn.tiaobatiaoba.com/Upload/square/2017-11-02/1509585140_1279.mp4";
                 listVideoUtil.setTitle("title " + position);
                 //listVideoUtil.setCachePath(new File(FileUtils.getPath()));
                 listVideoUtil.startPlay(url);

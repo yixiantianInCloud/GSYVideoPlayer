@@ -161,7 +161,7 @@ public class RecyclerView2Activity extends AppCompatActivity {
     }
 
     private void resolveData() {
-        for (int i = 0; i < 19; i++) {
+        for (int i = 0; i < 8; i++) {
             VideoModel videoModel = new VideoModel();
             dataList.add(videoModel);
         }

@@ -110,8 +110,10 @@ public class WebDetailActivity extends GSYBaseActivityDetail {
 
     @Override
     public GSYVideoOptionBuilder getGSYVideoOptionBuilder() {
-        String url = "http://baobab.wdjcdn.com/14564977406580.mp4";
+        //String url = "http://baobab.wdjcdn.com/14564977406580.mp4";
         //String url = "https://d131x7vzzf85jg.cloudfront.net/upload/documents/paper/b2/61/00/00/20160420_115018_b544.mp4";
+        //String url = "https://res.exexm.com/cw_145225549855002";
+        String url =  "http://9890.vod.myqcloud.com/9890_4e292f9a3dd011e6b4078980237cc3d3.f20.mp4";
         //增加封面。内置封面可参考SampleCoverVideo
         ImageView imageView = new ImageView(this);
         loadCover(imageView, url);
@@ -119,7 +121,7 @@ public class WebDetailActivity extends GSYBaseActivityDetail {
                 .setThumbImageView(imageView)
                 .setUrl(url)
                 .setCacheWithPlay(false)
-                .setVideoTitle("测试视频")
+                .setVideoTitle("WebDetail测试视频")
                 .setIsTouchWiget(true)
                 .setRotateViewAuto(false)
                 .setLockLand(false)

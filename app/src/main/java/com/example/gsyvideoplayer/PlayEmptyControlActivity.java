@@ -44,7 +44,8 @@ public class PlayEmptyControlActivity extends AppCompatActivity {
     }
 
     private void init() {
-        String url = "http://baobab.wdjcdn.com/14564977406580.mp4";
+        //String url = "http://baobab.wdjcdn.com/14564977406580.mp4";
+        String url = "http://cdn.tiaobatiaoba.com/Upload/square/2017-11-02/1509585140_1279.mp4";
 
         videoPlayer.setUp(url, true, "");
 

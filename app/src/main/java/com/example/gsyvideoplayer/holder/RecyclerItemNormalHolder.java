@@ -57,7 +57,8 @@ public class RecyclerItemNormalHolder extends RecyclerItemBaseHolder {
         String url;
         String title;
         if (position % 2 == 0) {
-            url = "http://baobab.wdjcdn.com/14564977406580.mp4";
+            //url = "http://baobab.wdjcdn.com/14564977406580.mp4";
+            url = "http://cdn.tiaobatiaoba.com/Upload/square/2017-11-02/1509585140_1279.mp4";
             title = "这是title";
         } else {
             url = "http://9890.vod.myqcloud.com/9890_4e292f9a3dd011e6b4078980237cc3d3.f20.mp4";

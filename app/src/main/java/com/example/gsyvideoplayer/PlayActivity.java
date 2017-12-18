@@ -67,11 +67,16 @@ public class PlayActivity extends AppCompatActivity {
         String name2 = "清晰";
         SwitchVideoModel switchVideoModel2 = new SwitchVideoModel(name2, source2);
 
+        String source3 = "http://cdn.tiaobatiaoba.com/Upload/square/2017-11-02/1509585140_1279.mp4";
+        String name3 = "有点卡";
+        SwitchVideoModel switchVideoModel3 = new SwitchVideoModel(name3, source3);
+
         List<SwitchVideoModel> list = new ArrayList<>();
         list.add(switchVideoModel);
         list.add(switchVideoModel2);
+        list.add(switchVideoModel3);
 
-        videoPlayer.setUp(list, true, "测试视频");
+        videoPlayer.setUp(list, true, "Play测试视频");
 
         //增加封面
         ImageView imageView = new ImageView(this);
